@@ -315,55 +315,74 @@
   </main>
 
 <script>
-  function equalizeRowHeights() {
+  function ajustarLinhas() {
+
     document.querySelectorAll('.portfolio-row').forEach(row => {
 
       const projects = Array.from(row.querySelectorAll('.project'));
+
+      if (projects.length < 2) return;
+
       const images = projects
         .map(project => project.querySelector('img'))
         .filter(img => img && img.complete && img.naturalWidth);
 
-      // Não aplica em linhas com apenas uma imagem
       if (images.length < 2) return;
 
-      // Em telas pequenas, o CSS coloca as imagens uma abaixo da outra
+      // No celular: uma imagem por linha
       if (window.innerWidth <= 900) {
+
+        projects.forEach(project => {
+          project.style.flex = 'none';
+          project.style.width = '100%';
+        });
+
         images.forEach(img => {
           img.style.width = '100%';
           img.style.height = 'auto';
         });
+
         return;
       }
 
       const gap = 24;
 
-      // Largura disponível para as imagens
-      const availableWidth =
-        row.clientWidth - gap * (images.length - 1);
+      // Espaço disponível na linha
+      const totalGap = gap * (images.length - 1);
+      const availableWidth = row.clientWidth - totalGap;
 
       // Soma das proporções das imagens
       const totalRatio = images.reduce((sum, img) => {
         return sum + (img.naturalWidth / img.naturalHeight);
       }, 0);
 
-      // Calcula uma altura única para que todas caibam
+      // Altura que faz TODAS as imagens caberem
+      // exatamente na largura disponível
       const height = availableWidth / totalRatio;
 
-      images.forEach(img => {
-        const ratio = img.naturalWidth / img.naturalHeight;
+      images.forEach((img, index) => {
 
+        const ratio = img.naturalWidth / img.naturalHeight;
+        const width = height * ratio;
+
+        // A caixa do projeto terá exatamente
+        // a mesma largura da imagem
+        projects[index].style.flex = '0 0 auto';
+        projects[index].style.width = `${width}px`;
+
+        img.style.width = `${width}px`;
         img.style.height = `${height}px`;
-        img.style.width = `${height * ratio}px`;
         img.style.objectFit = 'contain';
       });
+
+      // Garante que o espaço seja EXATAMENTE 24px
+      row.style.gap = `${gap}px`;
+      row.style.justifyContent = 'flex-start';
     });
   }
 
-  // Executa quando todas as imagens carregarem
-  window.addEventListener('load', equalizeRowHeights);
-
-  // Recalcula quando a janela mudar de tamanho
-  window.addEventListener('resize', equalizeRowHeights);
+  window.addEventListener('load', ajustarLinhas);
+  window.addEventListener('resize', ajustarLinhas);
 </script>
   
 </body>
