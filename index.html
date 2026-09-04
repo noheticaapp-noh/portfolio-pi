@@ -314,6 +314,40 @@
 
   </main>
 
+  <script>
+  function equalizeRowHeights() {
+    document.querySelectorAll('.portfolio-row').forEach(row => {
+      const projects = row.querySelectorAll('.project');
+
+      if (projects.length < 2) return;
+
+      const images = row.querySelectorAll('.project img');
+
+      images.forEach(img => {
+        img.style.height = 'auto';
+      });
+
+      const heights = Array.from(images)
+        .filter(img => img.complete && img.naturalWidth)
+        .map(img => img.getBoundingClientRect().height);
+
+      if (!heights.length) return;
+
+      const minHeight = Math.min(...heights);
+
+      images.forEach(img => {
+        const ratio = img.naturalWidth / img.naturalHeight;
+        img.style.height = `${minHeight}px`;
+        img.style.width = `${minHeight * ratio}px`;
+        img.style.objectFit = 'contain';
+      });
+    });
+  }
+
+  window.addEventListener('load', equalizeRowHeights);
+  window.addEventListener('resize', equalizeRowHeights);
+</script>
+
 </body>
 
 </html>
