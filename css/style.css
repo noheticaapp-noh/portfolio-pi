@@ -190,6 +190,41 @@ color: var(--subtext);
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
+/* ---------- CURRÍCULO ---------- */
+
+.curriculo {
+  width: 100%;
+}
+
+.curriculo-intro {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 48px;
+  align-items: start;
+}
+
+.curriculo-foto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.curriculo-bio {
+  padding-top: 0;
+}
+
+.curriculo-bio h2 {
+  margin: 0 0 32px;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 500;
+}
+
+.curriculo-bio p {
+  margin: 0 0 24px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--subtext);
+}
 
 /* ---------- RESPONSIVO ---------- */
 
