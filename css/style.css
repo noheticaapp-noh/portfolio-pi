@@ -40,6 +40,28 @@ body {
   filter: invert(1);
 }
 
+.portfolio-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.portfolio-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-top: 8px;
+}
+
+.portfolio-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
 /* ---------- CABEÇALHO ---------- */
 
 .portfolio-header {
