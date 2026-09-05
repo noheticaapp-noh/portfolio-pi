@@ -211,6 +211,7 @@ grid-template-columns: 40% 60%;
 
 .curriculo-bio {
   padding-top: 0;
+    padding-right: 8%;
 }
 
 .curriculo-bio h2 {
