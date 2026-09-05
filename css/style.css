@@ -27,6 +27,17 @@ body {
   padding: 48px;
 }
 
+.portfolio-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.portfolio-brand img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
 
 /* ---------- CABEÇALHO ---------- */
 
