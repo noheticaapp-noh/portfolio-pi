@@ -1,5 +1,6 @@
 :root {
   --bg: #03141b;
+   --bgcards: #10202d;
   --text: #dfe9ed;
   --subtext: #aaaaaa;
   --text-muted: #7f8b91;
@@ -164,7 +165,7 @@ color: var(--subtext);
 
   padding: 60px 8%;
 
-  background: #111111;
+  background: --bgcards;
 }
 
 .text-card p {
