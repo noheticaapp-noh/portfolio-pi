@@ -37,6 +37,7 @@ body {
   width: 70px;
   height: 70px;
   object-fit: contain;
+  filter: invert(1);
 }
 
 /* ---------- CABEÇALHO ---------- */
