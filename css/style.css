@@ -198,7 +198,7 @@ color: var(--subtext);
 
 .curriculo-intro {
   display: grid;
-  grid-template-columns: 35% 65%;
+grid-template-columns: 40% 60%;
   gap: 48px;
   align-items: start;
 }
