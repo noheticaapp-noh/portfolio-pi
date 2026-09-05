@@ -298,3 +298,9 @@ grid-template-columns: 40% 60%;
   margin-bottom: 4px;
 }
 
+
+.curriculo-duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
