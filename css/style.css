@@ -169,7 +169,8 @@ color: var(--subtext);
 
   background: var(--bgcards);
 
-  margin-left: -48px;
+ margin-left: -48px;
+margin-right: -48px;
 }
 
 .text-card p {
