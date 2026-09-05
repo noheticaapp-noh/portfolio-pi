@@ -286,3 +286,15 @@ grid-template-columns: 40% 60%;
 }
 
 
+.skills {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--subtext);
+}
+
+.skills li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
