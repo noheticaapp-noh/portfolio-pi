@@ -304,3 +304,11 @@ grid-template-columns: 40% 60%;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
 }
+
+
+
+.curriculo-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
