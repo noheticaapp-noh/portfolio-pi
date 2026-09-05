@@ -84,7 +84,7 @@ body {
 .portfolio-subtitle {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: var(--text-muted);
+color: var(--subtext);
 }
 
 
