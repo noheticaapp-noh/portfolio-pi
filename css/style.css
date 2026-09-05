@@ -165,7 +165,7 @@ color: var(--subtext);
 
   padding: 60px 8%;
 
-  background: --bgcards;
+ background: var(--bgcards);
 }
 
 .text-card p {
