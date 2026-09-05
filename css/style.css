@@ -63,6 +63,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+.portfolio-nav a.active {
+  color: var(--text);
+}
+
 /* ---------- CABEÇALHO ---------- */
 
 .portfolio-header {
