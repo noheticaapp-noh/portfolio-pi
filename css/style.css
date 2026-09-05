@@ -152,6 +152,15 @@ body {
   min-height: 400px;
 }
 
+.text-card-intro {
+  min-height: 160px;
+  padding: 40px 8%;
+}
+
+.text-card-intro p {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
 
 /* ---------- RESPONSIVO ---------- */
 
