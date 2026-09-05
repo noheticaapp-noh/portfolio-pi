@@ -76,7 +76,7 @@ body {
 
 .portfolio-header h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-size: clamp(2.2rem, 5vw, 5rem);
   font-weight: 500;
   letter-spacing: -0.05em;
   line-height: 0.95;
