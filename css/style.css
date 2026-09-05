@@ -158,7 +158,7 @@ color: var(--subtext);
 /* ---------- BLOCOS DE TEXTO ---------- */
 
 .text-card {
-  width: 100%;
+  width: calc(100% + 96px);
   min-height: 280px;
 
   display: flex;
@@ -167,7 +167,9 @@ color: var(--subtext);
 
   padding: 60px 8%;
 
- background: var(--bgcards);
+  background: var(--bgcards);
+
+  margin-left: -48px;
 }
 
 .text-card p {
